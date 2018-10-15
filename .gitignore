@@ -1,0 +1,5 @@
+*.avi
+__pycache__/
+protos/__pycache__/
+core/__pycache__/
+utils/__pycache__/
