@@ -26,7 +26,7 @@ or
 
 ## Modifications to object_detection repository
 
-I made some minor modifications to original distributed TensorFlow files to get this repository work independently without the full copy of tensorflow models repository.
+I made some minor modifications to original distributed TensorFlow files to get this repository to work independently without the full copy of tensorflow models repository.
 
 ## Model
 
