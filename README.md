@@ -26,14 +26,14 @@ or
 
 ## Modifications to object_detection repository
 
-I made some minor modifications to original distributed TensorFlow files to get this repository to work independently without the full copy of tensorflow models repository.
+I made some minor modifications to the original TensorFlow files for getting this repository to work independently without the full copy of tensorflow/models repository.
 
 ## Model
 
 This repository is distributed with the **ssdlite_mobilenet_v2_coco_2018_05_09** model that is suited for fast and lightweight inference.
 If you want to try something else, you can get another coco-trained model from the [model-zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md).
 
-*Note!* Only cooc-trained models are currently supported.
+*Note!* Only coco-trained models are currently supported.
 
 Unzip the model folder to a /model_name folder here and make sure the **frozen_inference_graph.pb** is found on the **/model_name/frozen_inference_graph.pb**.
 Use the ```--model="model_name"``` flag to select the inference model.
