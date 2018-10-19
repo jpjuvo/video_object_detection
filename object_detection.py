@@ -40,9 +40,6 @@ VIDEO_PATH = args.video
 
 VIDEO_OUT_PATH = args.out_video
 
-VID_WIDTH = 0
-VID_HEIGHT = 0
-
 #Load a (frozen) Tensorflow model into memory.
 detection_graph = tf.Graph()
 with detection_graph.as_default():
@@ -57,8 +54,6 @@ category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABE
 
 # Helper code
 def load_image_into_numpy_array(image):
-  global VID_WIDTH
-  global VID_HEIGHT
   VID_WIDTH = image.shape[1]
   VID_HEIGHT = image.shape[0]
   return np.array(image).reshape(
@@ -115,7 +110,7 @@ cap = cv2.VideoCapture(VIDEO_PATH)
 # Define the codec and create VideoWriter object
 # Modify the next line if you want to process different codecs
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter(VIDEO_OUT_PATH,fourcc, float(FRAME_RATE), (VID_WIDTH, VID_HEIGHT))
+out = cv2.VideoWriter(VIDEO_OUT_PATH,fourcc, float(FRAME_RATE), (int(cap.get(3)),int(cap.get(4))))
 
 while(cap.isOpened()):
   ret, frame = cap.read()
