@@ -115,7 +115,7 @@ cap = cv2.VideoCapture(VIDEO_PATH)
 # Define the codec and create VideoWriter object
 # Modify the next line if you want to process different codecs
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc, FRAME_RATE, (VID_WIDTH, VID_HEIGHT))
+out = cv2.VideoWriter(VIDEO_OUT_PATH,fourcc, FRAME_RATE, (VID_WIDTH, VID_HEIGHT))
 
 while(cap.isOpened()):
   ret, frame = cap.read()
