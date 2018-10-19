@@ -23,7 +23,7 @@ parser = argparse.ArgumentParser(description='Simple object detection inference 
 parser.add_argument('-v','--video', help='The video file path.')
 parser.add_argument('-o','--out_video', default='output.avi', help='The output video file.')
 parser.add_argument('-m','--model', default='ssdlite_mobilenet_v2_coco_2018_05_09', help='The model name. Use only coco trained models. Download from: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md')
-parser.add_argument('-f','--fps', default=24, help='Video file frame rate.')
+parser.add_argument('-f','--fps', default=24, help='Video file frame rate.', type=int)
 args = parser.parse_args()
 
 MODEL_NAME = args.model
