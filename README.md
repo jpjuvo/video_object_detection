@@ -1,6 +1,6 @@
 # TensorFlow object detection on a video
 
-This is a python implementation for doing object detection inference on a video. All required **TensorFlow/models/research/object_detection** utilities are repackaged here so you can get started quickly.
+This is a python implementation for doing object detection inference on a video. All required **[TensorFlow/models/research/object_detection](https://github.com/tensorflow/models/tree/master/research/object_detection)** utilities are repackaged here so you can get started quickly.
 
 ![Example video](/cars.gif)
 
@@ -24,9 +24,11 @@ or
 
 ```python object_detection.py --video="myVideo.avi" --fps=24 --out_video="outputVideo.avi" --model="ssdlite_mobilenet_v2_coco_2018_05_09"```
 
+*Note!* Press '**q**' if you want to stop before the detection has finished the whole video.
+
 ## Modifications to object_detection repository
 
-I made some minor modifications to the original TensorFlow files for getting this repository to work independently without the full copy of tensorflow/models repository.
+I made some minor modifications to the original TensorFlow files for getting this repository to work independently without the full copy of [tensorflow/models repository](https://github.com/tensorflow/models).
 
 ## Model
 
