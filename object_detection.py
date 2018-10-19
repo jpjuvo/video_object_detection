@@ -23,7 +23,7 @@ parser = argparse.ArgumentParser(description='Simple object detection inference 
 parser.add_argument('-v','--video', help='The video file path.')
 parser.add_argument('-o','--out_video', default='output.avi', help='The output video file.')
 parser.add_argument('-m','--model', default='ssdlite_mobilenet_v2_coco_2018_05_09', help='The model name. Use only coco trained models. Download from: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md')
-parser.add_argument('-f','--fps', default=24, help='Video file frame rate.', type=int)
+parser.add_argument('-f','--fps', default=24.0, help='Video file frame rate.')
 args = parser.parse_args()
 
 MODEL_NAME = args.model
@@ -115,7 +115,7 @@ cap = cv2.VideoCapture(VIDEO_PATH)
 # Define the codec and create VideoWriter object
 # Modify the next line if you want to process different codecs
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter(VIDEO_OUT_PATH,fourcc, FRAME_RATE, (VID_WIDTH, VID_HEIGHT))
+out = cv2.VideoWriter(VIDEO_OUT_PATH,fourcc, float(FRAME_RATE), (VID_WIDTH, VID_HEIGHT))
 
 while(cap.isOpened()):
   ret, frame = cap.read()
