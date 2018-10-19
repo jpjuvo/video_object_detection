@@ -14,7 +14,7 @@ This is a python implementation for doing object detection inference on a video.
 - OpenCV python package
 
 You can install the required packages with pip.
-```pip install tensorflow pillow opencv```
+```pip install tensorflow pillow opencv-python```
 
 ## Usage
 
